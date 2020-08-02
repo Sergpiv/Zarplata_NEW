@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ItemDetailActivity" >
+
+    <TextView
+        android:id="@+id/item_oper"
+        style="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:textAllCaps="false"
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:context=".ItemDetailFragment" />
+
+    <TextView
+        android:id="@+id/item_rasz"
+        style="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:textAllCaps="false"
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        tools:context=".ItemDetailFragment" />
+
+    <TextView
+        android:id="@+id/item_poasnenie"
+        style="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:textAllCaps="false"
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:context=".ItemDetailFragment" />
+
+</LinearLayout>

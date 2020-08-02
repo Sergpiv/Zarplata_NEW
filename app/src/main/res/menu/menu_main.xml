@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_rasz"
+        android:menuCategory="system"
+        android:orderInCategory="1"
+        android:title="расценки"
+        app:showAsAction="never" />
+    <item
+        android:menuCategory="system"
+        android:orderInCategory="2"
+        android:title="отчёты" >
+        <menu >
+            <item
+                android:id="@+id/rep_year"
+                android:title="за год" />
+            <item
+                android:menuCategory="system"
+                android:orderInCategory="2"
+                android:title="за месяц">
+                <menu>
+                    <item
+                        android:id="@+id/dat"
+                        android:title="по дате" />
+                    <item
+                        android:id="@+id/det"
+                        android:title="по детали" />
+                </menu>
+            </item>
+        </menu>
+    </item>
+    <item
+        android:menuCategory="system"
+        android:orderInCategory="2"
+        android:title="база данных">
+        <menu>
+            <item
+                android:id="@+id/in_copy"
+                android:title="создать копию" />
+            <item
+                android:id="@+id/out_copy"
+                android:title="восстановить из копии..." />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@android:drawable/ic_menu_help"
+        android:menuCategory="system"
+        android:orderInCategory="3"
+        android:title="о программе..."
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_exit"
+        android:icon="@drawable/ic_action_name"
+        android:menuCategory="system"
+        android:orderInCategory="2"
+        android:title="выход"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:menuCategory="system"
+        android:orderInCategory="0"
+        android:title="настройки"
+        app:showAsAction="always" />
+</menu>

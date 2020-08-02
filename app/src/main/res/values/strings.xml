@@ -1,0 +1,30 @@
+<resources>
+    <string name="items">Items</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="app_name">Zarplata_NEW</string>
+    <string name="rasz_path">//data/data/by.android.develop.zarplata_new/databases/rasz.db</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="query_rabotn">SELECT cod_rab FROM tabel GROUP BY cod_rab, tab HAVING tab=?</string>
+    <string name="query_detal">SELECT detal.cod, detal.detal FROM detal INNER JOIN print_raszenka ON detal.cod = print_raszenka.cod_det LEFT JOIN tabel ON tabel.Cod_rab = print_raszenka.cod_rab GROUP BY tab, detal.detal, detal.cod HAVING tab=? ORDER BY detal</string>
+    <string name="query_detal_all">SELECT cod, detal FROM detal GROUP BY detal ORDER BY detal</string>
+    <string name="APP_PREFERENCES_NAME">by.android.develop.zarplata_new_preferences</string>
+    <string name="query_rasz">SELECT raszenki.Nomer_operazii, raszenki.Raszenka, raszenki.Poasnenie, print_raszenka.Cod_det,print_raszenka.Cod_rasz
+    FROM raszenki INNER JOIN print_raszenka ON print_raszenka.cod_rasz = raszenki.Cod
+LEFT JOIN tabel ON tabel.Cod_rab = print_raszenka.cod_rab
+    GROUP BY raszenki.Nomer_operazii, raszenki.Raszenka, raszenki.Poasnenie, print_raszenka.cod_rab, print_raszenka.Cod_det, print_raszenka.Cod_rasz
+    HAVING (((print_raszenka.Cod_det)=?) AND (tab=?))ORDER BY print_raszenka.Cod_det</string>
+    <string name="query_rasz_all">SELECT raszenki.Nomer_operazii, raszenki.Raszenka, raszenki.Poasnenie, print_raszenka.Cod_det, print_raszenka.Cod_rasz
+    FROM raszenki INNER JOIN print_raszenka ON raszenki.Cod = print_raszenka.cod_rasz
+    GROUP BY raszenki.Nomer_operazii, raszenki.Raszenka, raszenki.Poasnenie, print_raszenka.Cod_det, print_raszenka.Cod_rasz
+    HAVING (((print_raszenka.Cod_det)=?))</string>
+    <string name="query_vipusk">SELECT zarplata._id, rasz.Detal.detal AS [Detal], rasz.Raszenki.nomer_operazii AS [Oper], rasz.Raszenki.raszenka AS [Rasz], zarplata.Colichestvo AS [Colichestvo] FROM rasz.Detal
+INNER JOIN zarplata ON rasz.Detal.Cod = zarplata.Cod_detali
+LEFT JOIN rasz.Raszenki ON rasz.raszenki.Cod = zarplata.Cod_raszenki
+GROUP BY rasz.Detal.detal, rasz.Raszenki.nomer_operazii, zarplata.Cod_rabotnika, rasz.Raszenki.raszenka, zarplata.data, zarplata._id, zarplata.Colichestvo
+HAVING (zarplata.Cod_rabotnika=?) AND (zarplata.data=?)
+ORDER BY rasz.detal.detal</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+</resources>
